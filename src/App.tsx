@@ -1,17 +1,16 @@
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import RegistrationForm from './components/RegistrationForm';
-import NotFound from './pages/NotFound';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import RegistrationForm from "./components/RegistrationForm";
+import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<RegistrationForm />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<RegistrationForm />} />
+      <Route path="/home" element={<Index />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
